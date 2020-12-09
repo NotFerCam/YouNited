@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Añadir Cliente</title>
     <link rel="icon" type="image/x-icon" href="fotos/fercam.png" />
     <!-- Favicon-->
         <!-- Font Awesome icons (free version)-->
@@ -23,12 +23,12 @@
       background-size: cover;
     }
     form{
+      margin: auto;
+      width: 400px;
       border-radius: 10px;
       background-color: white;
       margin-top: 220px;
       margin-bottom: 100px;
-      margin-left: 40%;
-      margin-right: 40%;
       text-align: center;
       padding: 10px;
     }
@@ -75,13 +75,17 @@
 <body background="background1.jpg">  
 <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
   <div class="container">
-      <a class="navbar-brand js-scroll-trigger" href="#page-top">YouNited</a>
+      <a class="navbar-brand js-scroll-trigger" href="paginaEmpleado.php">YouNited</a>
       <button class="navbar-toggler navbar-toggler-right text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           Menu
           <i class="fas fa-bars"></i>
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
+          <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="datosClientes.php">Datos Personas</a></li>                    
+              <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="añadirEmpleado.php">+Empleado</a></li>                    
+              <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="modificarDatos.php">Modificaciones</a></li>                    
+              <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="añadirVideojuegos.php">Videojuegos</a></li>             
               <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="menuEmpleado.php">Atras</a></li>
           </ul>
       </div>
@@ -152,7 +156,6 @@
            }
            mysqli_close($c);
  ?>
-        <p><a href="index.php">¿Ya tienes cuenta?</a></p>
     </form>
 </body>
 </html>

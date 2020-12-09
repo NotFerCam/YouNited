@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Agregar Empleado</title>
     <link rel="icon" type="image/x-icon" href="fotos/fercam.png" />
     <!-- Favicon-->
         <!-- Font Awesome icons (free version)-->
@@ -16,9 +16,7 @@
     <style>
     body {
       font-family: Arial, Helvetica, sans-serif;
-      background-color: #ffdd90;
-      background-image: url("fotos/background3.jpg");
-      background-repeat: no-repeat;
+      background-color: lightcoral;      
       -webkit-background-size: cover;
       -moz-background-size: cover;
       -o-background-size: cover;
@@ -30,7 +28,7 @@
       border-radius: 10px;
       background-color: white;
       margin-top: 220px;
-      margin-bottom: 100px;      
+      margin-bottom: 100px;
       text-align: center;
       padding: 10px;
     }
@@ -54,7 +52,7 @@
     }
 
     button:hover{
-      background-color: lightgreen;
+      background-color: lightcoral;
     }
 
     .titulo{
@@ -77,44 +75,47 @@
 <body background="background1.jpg">  
 <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
   <div class="container">
-      <a class="navbar-brand js-scroll-trigger" href="#page-top">YouNited</a>
+      <a class="navbar-brand js-scroll-trigger" href="paginaEmpleado.php">YouNited</a>
       <button class="navbar-toggler navbar-toggler-right text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           Menu
           <i class="fas fa-bars"></i>
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
-              <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="index.php">Home</a></li>
-              <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="login.php">Iniciar Sesion</a></li>
+              <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="datosClientes.php">Datos Personas</a></li>                    
+              <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="añadirCliente.php">+Cliente</a></li>  
+              <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="modificarDatos.php">Modificaciones</a></li>                                      
+              <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="añadirVideojuegos.php">Videojuegos</a></li>  
+              <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="menuEmpleado.php">Atras</a></li>
           </ul>
       </div>
   </div>
   </nav>    
     <form method="$_POST">
-        <p><b class="titulo">Registrarse</b></p>
+        <p><b class="titulo">Añadir Empleado</b></p>
         <b><table style="width: 100%;">
           <tr>
-            <td>Nombre:</td>
+            <td align="center">Nombre:</td>
             <td><input type="text" name="nombre" required></td>
           </tr>
           <tr>
-            <td>Apellidos:</td>
+            <td align="center">Apellidos:</td>
             <td><input type="text" name="apell" required></td>
           </tr>
           <tr>
-            <td>DNI:</td>
+            <td align="center">DNI:</td>
             <td><input type="text" name="dni" required></td>
           </tr>
           <tr>
-            <td>Telefono</td>
+            <td align="center">Telefono</td>
             <td><input type="text" name="tel" required></td>
           </tr>
           <tr>
-            <td>Email</td>
+            <td align="center">Email</td>
             <td><input type="text" name="correo" required> </td>
           </tr>
           <tr>
-            <td>Contraseña</td>
+            <td align="center">Contraseña</td>
             <td><input type="password" name="contraseña" required></td>
           </tr>          
         </table></b><br>
@@ -125,7 +126,7 @@
 
            $base="tienda_videojuegos";
 
-           $tabla="cliente";
+           $tabla="empleado";
 
            $v1=$_REQUEST['dni'];
            $v2=$_REQUEST['nombre'];
@@ -140,7 +141,7 @@
            mysqli_select_db($c,$base); 
 
            if(isset($_REQUEST['boton'])){          
-            mysqli_query($c,"INSERT $tabla (DNI_CLI,Nombre,Apellidos,Telefono,Email,Contraseña) VALUES ('$v1','$v2','$v3','$v4','$v5','$v6')"); 
+            mysqli_query($c,"INSERT $tabla (DNI_EMPLE,Nombre,Apellidos,Telefono,Email,Contraseña) VALUES ('$v1','$v2','$v3','$v4','$v5','$v6')"); 
             echo "Se ha creado una nueva cuenta";
           }             
 
@@ -155,7 +156,6 @@
            }
            mysqli_close($c);
  ?>
-        <p><a href="login.php">¿Ya tienes cuenta?</a></p>
     </form>
 </body>
 </html>

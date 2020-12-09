@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Agregar Videojuegos</title>
     <link rel="icon" type="image/x-icon" href="fotos/fercam.png" />
     <!-- Favicon-->
         <!-- Font Awesome icons (free version)-->
@@ -14,6 +14,26 @@
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="styles.css" rel="stylesheet" />
     <style>
+    .general{
+      width: 100%;
+      height: 600px;
+    }
+    .datos tr{
+      border:2px solid green;
+    }
+    .datos td{
+      color: black;
+    }
+    .contenedor{
+      border-radius: 10px;
+      padding: 30px;
+      float: right;
+      text-align: center;
+      margin-right: 50px;
+      margin-top: 220px;
+      margin-bottom: 100px;
+      background-color: white;
+    }
     body {
       font-family: Arial, Helvetica, sans-serif;
       background-color: orange;
@@ -22,13 +42,12 @@
       -o-background-size: cover;
       background-size: cover;
     }
-    form{
+    .añadir{
+      margin-left: 100px;
+      width: 400px;
       border-radius: 10px;
       background-color: white;
-      margin-top: 220px;
       margin-bottom: 100px;
-      margin-left: 40%;
-      margin-right: 40%;
       text-align: center;
       padding: 10px;
       width: 400px;
@@ -71,99 +90,155 @@
       text-align: center;
       color: rgb(38, 113, 88)
     }
+
   </style>
 </head>
 <body>  
 <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
   <div class="container">
-      <a class="navbar-brand js-scroll-trigger" href="#page-top">YouNited</a>
-      <button class="navbar-toggler navbar-toggler-right text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          Menu
-          <i class="fas fa-bars"></i>
-      </button>
+      <a class="navbar-brand js-scroll-trigger" href="paginaEmpleado.php">YouNited</a>
       <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
+          <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="datosClientes.php">Datos Personas</a></li>                    
+              <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="añadirCliente.php">+Cliente</a></li>      
+              <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="modificarDatos.php">Modificaciones</a></li>                                  
+              <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="añadirEmpleado.php">+Empleado</a></li>  
               <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="menuEmpleado.php">Atras</a></li>
           </ul>
       </div>
   </div>
-  </nav>    
-    <form method="$_POST">
-        <p><b class="titulo">Añadir Videojuego</b></p>
-        <b><table style="width: 100%;">
-          <tr>
-            <td align="center">Codigo:</td>
-            <td><input type="text" name="cod" required></td>
-          </tr>
-          <tr>
-            <td align="center">Nombre:</td>
-            <td><input type="text" name="nombre" required></td>
-          </tr>
-          <tr>
-            <td align="center">Empresa:</td>
-            <td><input type="text" name="empresa" required></td>
-          </tr>
-          <tr>
-            <td align="center">Precio</td>
-            <td><input type="text" name="precio" required></td>
-          </tr>
-          <tr>
-            <td align="center">Descripcion:</td>
-            <td><input type="text" name="desc" required> </td>
-          </tr>
-          <tr>
-            <td align="center">Categorias:</td>
-            <td><input type="text" name="cat" required></td>
-          </tr>      
-          <tr>
-            <td align="center">Plataformas:</td>
-            <td><input type="text" name="plat" required></td>
-          </tr>     
-          <tr>
-            <td align="center">Fecha Lanzamiento:</td>
-            <td><input type="text" name="flan" required></td>
-          </tr> 
-        </table></b><br>
-        <p><button type="submit" name="boton">Enviar</button></p>
-        <?php
+  </nav>  
+  <table class="general">
+    <tr>
+      <td>
+        <form method="$_POST" class="añadir">
+          <p><b class="titulo">Añadir Videojuego</b></p>
+          <b><table style="width: 100%;">
+            <tr>
+              <td align="center">Codigo:</td>
+              <td><input type="text" name="cod" required></td>
+            </tr>
+            <tr>
+              <td align="center">Nombre:</td>
+              <td><input type="text" name="nombre" required></td>
+            </tr>
+            <tr>
+              <td align="center">Empresa:</td>
+              <td><input type="text" name="empresa" required></td>
+            </tr>
+            <tr>
+              <td align="center">Precio</td>
+              <td><input type="text" name="precio" required></td>
+            </tr>
+            <tr>
+              <td align="center">Descripcion:</td>
+              <td><input type="text" name="desc" required> </td>
+            </tr>
+            <tr>
+              <td align="center">Categorias:</td>
+              <td><input type="text" name="cat" required></td>
+            </tr>      
+            <tr>
+              <td align="center">Plataformas:</td>
+              <td><input type="text" name="plat" required></td>
+            </tr>     
+            <tr>
+              <td align="center">Fecha Lanzamiento:</td>
+              <td><input type="text" name="flan" required></td>
+            </tr> 
+          </table></b><br>
+          <p><button type="submit" name="boton">Enviar</button></p>
+          <?php
 
-           error_reporting(0);
+             error_reporting(0);
 
-           $base="tienda_videojuegos";
+             $base="tienda_videojuegos";
 
-           $tabla="videojuego";
+             $tabla="videojuego";
 
-           $v1=$_REQUEST['cod'];
-           $v2=$_REQUEST['nombre'];
-           $v3=$_REQUEST['empresa'];
-           $v4=$_REQUEST['precio'];
-           $v5=$_REQUEST['desc'];
-           $v6=$_REQUEST['cat'];
-           $v7=$_REQUEST['plat'];
-           $v8=$_REQUEST['flan'];
+             $v1=$_REQUEST['cod'];
+             $v2=$_REQUEST['nombre'];
+             $v3=$_REQUEST['empresa'];
+             $v4=$_REQUEST['precio'];
+             $v5=$_REQUEST['desc'];
+             $v6=$_REQUEST['cat'];
+             $v7=$_REQUEST['plat'];
+             $v8=$_REQUEST['flan'];
 
-           $c=mysqli_connect("localhost","david","david");
+             $c=mysqli_connect("localhost","david","david");
 
 
-           mysqli_select_db($c,$base); 
+             mysqli_select_db($c,$base); 
 
-           if(isset($_REQUEST['boton'])){          
-            mysqli_query($c,"INSERT $tabla (COD_V,Nombre,Empresa,Precio,Descripcion,Categorías,Plataformas,Fecha_lanzamiento) VALUES ('$v1','$v2','$v3','$v4','$v5','$v6','$v7','$v8')");             
-            echo "Se ha añadido un nuevo videojuego";
-          }             
+             if(isset($_REQUEST['boton'])){          
+              mysqli_query($c,"INSERT $tabla (COD_V,Nombre,Empresa,Precio,Descripcion,Categorias,Plataformas,Fecha_lanzamiento) VALUES ('$v1','$v2','$v3','$v4','$v5','$v6','$v7','$v8')");             
+              echo "Se ha añadido un nuevo videojuego";
+            }             
 
-           if (mysqli_errno($c)==0){
-          }else{
-                          if (mysqli_errno($c)==1062){
-                 }else{ 
-                 $numerror=mysqli_errno($c);
-                 $descrerror=mysqli_error($c);
-                 echo "Se ha producido un error nº $numerror que corresponde a: $descrerror  <br>";
-               }
-           }
-           mysqli_close($c);
- ?>
-        <p><a href="index.php">¿Ya tienes cuenta?</a></p>
-    </form>
+             if (mysqli_errno($c)==0){
+            }else{
+                            if (mysqli_errno($c)==1062){
+                   }else{ 
+                   $numerror=mysqli_errno($c);
+                   $descrerror=mysqli_error($c);
+                   echo "Se ha producido un error nº $numerror que corresponde a: $descrerror  <br>";
+                 }
+             }
+             mysqli_close($c);
+          ?>
+        </form>
+      </td>  
+      <td class="reducir">      
+      <?php
+            error_reporting(0);
+
+            $base="tienda_videojuegos";
+
+            $tabla="videojuego";
+
+            $c=mysqli_connect("localhost","david","david");
+
+            mysqli_select_db($c,$base);
+
+            $resultado= mysqli_query($c,"SELECT Cod_V,Nombre,Empresa,Precio,Categorias,Plataformas,Fecha_lanzamiento FROM $tabla");
+            echo "<div class='contenedor'>";
+            echo'
+            <form align="center">
+              <label>Codigo:</label>
+              <input type="text" name="cod">   
+              <button name="submit">Eliminar</button>                         
+            </form><br>
+            ';
+            echo "<table style='margin: 0 auto;' class='datos'>";
+
+            echo "  <tr>
+                        <th>Codigo</th>
+                        <th>Nombre</th>
+                        <th>Empresa</th>
+                        <th>Precio</th>
+                        <th>Categorias</th>
+                        <th>Plataformas</th>
+                        <th>Fecha Lanzamiento</th>
+                    </tr>";
+            while ($registro = mysqli_fetch_row($resultado)){                        
+                echo "<tr>";
+                foreach($registro  as $clave){
+                echo "<td>",$clave,"</td>";
+            }
+            }
+            echo "</tr></table></div>";
+
+            $cod = $_REQUEST['cod'];
+
+            if(isset($_REQUEST['submit'])){
+                mysqli_query($c,"DELETE FROM $tabla WHERE Cod_V='$cod'");                
+                header("Location: añadirVideojuegos.php");
+                die();
+            }
+            mysqli_close($c);            
+        ?>
+      </td>    
+    </tr>    
+  </table>    
 </body>
 </html>

@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Datos Clientes</title>
+        <title>Menu Empleado</title>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
@@ -24,7 +24,7 @@
                 margin-top: 220px;
                 margin-left: 30%;
                 margin-right: 30%;
-                border-radius: 505;
+                border-radius: 50px;
                 background-color: white;
             }
             tr{
@@ -42,24 +42,27 @@
                 background-size: cover;
             }
             section{
-                margin-top: 100px;
-                background-color: white;
+                margin-top: 50px;
+                background-color: white;                
             }
         </style>
     </head>
     <body>
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
-            <div class="container">
-                <a class="navbar-brand js-scroll-trigger" href="index.php">YouNited</a>                
-            </div>
+        <div class="container">
+            <a class="navbar-brand js-scroll-trigger" href="paginaEmpleado.php">YouNited</a>
+            <button class="navbar-toggler navbar-toggler-right text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                Menu
+                <i class="fas fa-bars"></i>
+            </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav ml-auto">
+                <ul class="navbar-nav ml-auto">                                            
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="paginaEmpleado.php">Atras</a></li>
-                    </ul>
-                </div>
+                </ul>
             </div>
-        </nav>
+        </div>
+    </nav> 
         <section class="page-section portfolio" id="portfolio">
             <div class="container">
                 <!-- Portfolio Section Heading-->
@@ -72,17 +75,17 @@
                 </div>
                 <!-- Portfolio Grid Items-->
                 <div class="row justify-content-center">
-                    <!-- Portfolio Item 1-->
+                    <!-- Portfolio Item 4-->
                     <div class="col-md-6 col-lg-4 mb-5">
-                        <a href="datosClientes.php">
-                        <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal1">
+                        <a href="añadirEmpleado.php">
+                        <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal2">
                             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                 <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
                             </div>
-                            <img class="img-fluid" src="fotos/datos.jpg" alt="" />
+                            <img class="img-fluid" src="fotos/emple.png" alt="" />
                         </div>
                         </a>                        
-                    </div>
+                    </div>                     
                     <!-- Portfolio Item 2-->
                     <div class="col-md-6 col-lg-4 mb-5">
                         <a href="añadirVideojuegos.php">
@@ -104,7 +107,29 @@
                             <img class="img-fluid" src="fotos/user.jpg" alt="" />
                         </div>
                         </a>                        
-                    </div>                                       
+                    </div>   
+                    <!-- Portfolio Item 1-->
+                    <div class="col-md-6 col-lg-4 mb-5">
+                        <a href="datosClientes.php">
+                        <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal1">
+                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <img class="img-fluid" src="fotos/datos1.png" alt="" />
+                        </div>
+                        </a>                        
+                    </div> 
+                    <!-- Portfolio Item 5-->
+                    <div class="col-md-6 col-lg-4 mb-5">
+                        <a href="modificarDatos.php">
+                        <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal2">
+                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <img class="img-fluid" src="fotos/Modificar1.png" alt="" />
+                        </div>
+                        </a>                        
+                    </div>                                         
                 </div>
             </div>
         </section>

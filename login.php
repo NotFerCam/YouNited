@@ -24,14 +24,14 @@
       background-size: cover;
     }
     form{
+      margin: auto;
       background-color: white;
       margin-top: 220px;
       margin-bottom: 100px;
-      margin-left: 40%;
-      margin-right: 40%;
       text-align: center;
       padding: 10px;
       border-radius: 10px;
+      width: 400px;
     }
 
     input{
